@@ -1,0 +1,27 @@
+
+/*
+
+  File name : index.js
+  Author's name :Vishwa Akhani
+  StudentID :300913898
+  App name :Favourite Book List App
+
+*/
+
+// modules required for routing
+let express = require('express');
+let router = express.Router();
+let mongoose = require('mongoose');
+
+// define the game model
+let book = require('../models/books');
+
+/* GET home page. wildcard */
+router.get('/', (req, res, next) => {
+  res.render('content/index', {
+    title: 'Home',
+    books: ''
+   });
+});
+
+module.exports = router;
